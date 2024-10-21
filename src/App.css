@@ -1,38 +1,39 @@
-.App {
+/* Carousel Title */
+.carousel-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #2b8a3e; /* Green color to match donate button */
   text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #2b8a3e, #0a74da); /* Green to blue gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text-gradient-animation 5s ease-in-out infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Text Gradient Animation */
+@keyframes text-gradient-animation {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 200%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.carousel-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #2b8a3e; /* Green underline */
+  margin: 10px auto 0 auto;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-title:hover::after {
+  width: 150px; /* Underline expands on hover */
 }

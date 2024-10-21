@@ -1,0 +1,268 @@
+.carousel-container {
+  position: relative;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding-bottom: 30px;
+  overflow: hidden; 
+}
+
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 100%; 
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+
+.campaign-card {
+  flex: 0 0 calc(33.33% - 20px); 
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.campaign-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.no-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  width: 100%;
+  height: 180px;
+  color: #666;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.campaign-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.campaign-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.donation-link {
+  padding: 12px 24px;
+  background-color: #2b8a3e;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.donation-link:hover {
+  background-color: #1e6a2c;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.carousel-btn {
+  background-color:#2b8a3e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 1; 
+}
+
+.carousel-btn:hover {
+  background-color: #216f31;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.carousel-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: #ccc;
+  margin: 0 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-indicator.active {
+  background-color:   #2b8a3e
+  ;
+}
+
+@media (max-width: 1024px) {
+  .campaign-card {
+    flex: 0 0 calc(50% - 20px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .campaign-card {
+    flex: 0 0 100%; 
+  }
+}
+
+.error-container {
+  text-align: center;
+  padding: 20px;
+  color: red;
+}
+
+.error-message {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.retry-button {
+  background-color: #2b8a3e;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.retry-button:hover {
+  background-color: #1e6a2c;
+}
+
+.loading-spinner {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 50px 0;
+}
+
+.empty-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 50px;
+}
+
+.next {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .campaign-card {
+    flex: 0 0 100%; 
+    margin: 0 auto; 
+  }
+
+  .carousel-container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .carousel-track-wrapper {
+    width: 100%; 
+  }
+
+  .carousel-btn {
+    padding: 0;
+    top: 50%;
+    font-size: 20px;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1; 
+  }
+
+  .carousel-indicators {
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .carousel-indicator {
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    background-color: #ccc;
+  }
+
+  .carousel-indicator.active {
+    background-color: #000;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+}
+
+.carousel-track-wrapper {
+  cursor: grab;
+  user-select: none;
+}
+
+.carousel-track-wrapper:active {
+  cursor: grabbing;
+}
+
+.loading-spinner-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #2b8a3e; 
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
